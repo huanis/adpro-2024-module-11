@@ -16,3 +16,17 @@ It shows which ports the application is listening to and what protocol is used. 
 This gets the list of resource in the default namespace. `kubectl get pods` is the same as `kubectl get pods -n default`.
 ### kubectl get \[resource type (ex: pods, deployments)\] -n \[namespace\]
 This gets the list of resource in the specified namespace.
+
+# Rolling Update & Kubernetes Manifest File
+## 1. Difference between Rolling Update and Recreate Strategy
+## 2. Deploy using Recreate Deployment Strategy
+I copied the deployment.yaml that uses Rolling Update and updated the value of spec.strategy.type from RollingUpdate to Recreate and deleted spec.strategy.rollingUpdate specifications.
+![recreate yaml](image-3.png)
+Then I deployed the created yaml.
+![recreate](image-4.png)
+
+## 3. Prepare Manifest File for Recreate Strategy Deployment
+It has been created due to the the previous question.
+
+## 4. Benefits of Using Kubernetes Manifest Files
+When deploying it manually, we need to create deployment and manually specify the specifications everytime. If we create a manifest file, when we need to deploy something with the same specification, we could just apply the file. No need to specify it again.
