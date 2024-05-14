@@ -24,6 +24,7 @@ I copied the deployment.yaml that uses Rolling Update and updated the value of s
 ![recreate yaml](image-3.png)
 Then I deployed the created yaml.
 ![recreate](image-4.png)
+![service recreate](image-7.png)
 
 ## 3. Prepare Manifest File for Recreate Strategy Deployment
 It has been created due to the the previous question.
